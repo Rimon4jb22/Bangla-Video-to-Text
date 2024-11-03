@@ -3,6 +3,12 @@
 
 This Python project extracts audio from a video file, splits it into manageable chunks, converts each chunk to text in Bengali, and combines the results into a final transcript. The script uses `moviepy` for video processing, `pydub` for audio splitting, and Google's Speech Recognition API for transcription.
 
+## Provide Inputs
+After running the script, it'll want the following inputs:
+
+1. Path to the Video File: Enter the path or filename (e.g., input_video.mp4).
+2. Name for the Output Text File: Specify the name for the final transcript (e.g., output.txt).
+
 ## Features
 
 - Extracts audio from a video file
