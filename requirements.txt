@@ -1,3 +1,2 @@
-moviepy
-pydub
+yt-dlp
 SpeechRecognition
