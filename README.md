@@ -1,24 +1,35 @@
-# Bangla-Video-to-Text
+# VideoAudio-to-Text
 
+A lightweight Python-based transcription tool that converts local video files, local audio files, and supported online video URLs into text.
 
-This Python project extracts audio from a video file, splits it into manageable chunks, converts each chunk to text in Bengali, and combines the results into a final transcript. The script uses `moviepy` for video processing, `pydub` for audio splitting, and Google's Speech Recognition API for transcription.
-
-## Provide Inputs
-After running the script, it'll want the following inputs:
-
-1. Path to the Video File: Enter the path or filename (e.g., input_video.mp4).
-2. Name for the Output Text File: Specify the name for the final transcript (e.g., output.txt).
+This project supports multiple languages and uses FFmpeg streaming to process audio in small chunks, helping reduce RAM usage when processing long media files.
 
 ## Features
 
-- Extracts audio from a video file
-- Splits audio into 60-second chunks to handle long files
-- Converts audio to Bengali text using Google Speech Recognition
-- Cleans up temporary files after processing
+- Convert local video files to text
+- Convert local audio files to text
+- Convert supported online video URLs to text
+- Support for YouTube, Facebook, and other platforms supported by yt-dlp
+- Multi-language speech recognition
+- Built-in support for:
+  - Bangla
+  - English
+  - Hindi
+  - Urdu
+  - Chinese
+  - Arabic
+  - Japanese
+  - Korean
+- Custom language code support
+- FFmpeg-based streaming audio processing
+- Processes audio in 30-second chunks
+- Reduced RAM usage for long media files
+- Automatic output file naming
+- Optional deletion of downloaded videos
 
-## Requirements
+## How It Works
 
-To install the required dependencies, use:
-
-```bash
-pip install -r requirements.txt
+```text
+Local Video ───┐
+Local Audio ───┼──> FFmpeg Audio Stream ──> Speech Recognition ──> Text File
+Online URL ────┘
